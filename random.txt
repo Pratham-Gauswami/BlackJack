@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackjack UI</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-green-900 text-gray-200 font-sans min-h-screen flex flex-col items-center justify-center">
+  
+  <!-- Game Table -->
+  <div class="bg-green-800 p-8 rounded-lg shadow-lg w-full max-w-4xl">
+    <!-- Dealer Section -->
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold mb-4">Dealer</h2>
+      <div class="flex justify-center space-x-4">
+        <div class="card card-back">?</div>
+        <div class="card">9♠</div>
+        <div class="card">K♣</div>
+      </div>
+    </div>
+
+    <!-- Game Message -->
+    <div class="text-center my-8">
+      <h1 class="text-3xl font-bold">Player Wins!</h1>
+    </div>
+
+    <!-- Player Section -->
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold mb-4">Player</h2>
+      <div class="flex justify-center space-x-4">
+        <div class="card">A♦</div>
+        <div class="card">5♣</div>
+      </div>
+    </div>
+
+    <!-- Control Buttons -->
+    <div class="flex justify-center space-x-6">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Hit
+      </button>
+      <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        Stand
+      </button>
+    </div>
+  </div>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

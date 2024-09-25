@@ -1,6 +1,22 @@
-<html>
-    <head>
-        <script src="index.js"></script>
-    </head>
-    <body></body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="./output.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1> BlackJack </h1>
+  <p id="message-el"> Want to play a round?</p>
+  <p id="cards-el">Cards: </p>
+  <p id="sum-el">Sum: </p>
+  <button onclick="startGame()">Start Game</button>
+  <button onclick="newCard()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    New Card
+  </button>
+  <!-- 1. Create a NEW CARD button, make it run newCard() on click -->
+  <!-- //Need to put the script after the DOM has rendered fully otherwise wont be able to refrence objects -->
+  <script src="index.js"></script> 
+</body>
 </html>
