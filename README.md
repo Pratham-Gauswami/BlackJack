@@ -36,7 +36,7 @@ This is a **BlackJack** game built using **HTML**, **CSS**, and **JavaScript**. 
    ```
 2. Navigate into the project directory:
    ```bash
-   cd blackjack-game
+   cd BlackJack
    ```
 3. Open the `index.html` file in any modern browser to start playing the game.
 
@@ -46,10 +46,6 @@ This is a **BlackJack** game built using **HTML**, **CSS**, and **JavaScript**. 
 - Implement multiplayer support.
 - Include a score history or leaderboard.
 - Add betting functionality.
-
-## Screenshots
-
-Include screenshots here (if you have any) to showcase your game visually.
 
 ## License
 
