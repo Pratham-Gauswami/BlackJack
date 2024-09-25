@@ -1,11 +1,13 @@
-let firstCard = getRandomCard ()
-let secondCard = getRandomCard ()
+let player = {
+    name: "Per",
+    chips: 145
+}
 let age = 22
 let hasBlackJack = false
-let isAlive = true
-let sum = firstCard + secondCard
+let isAlive = false
+let sum = 0
 let msg = ""
-let cards = [firstCard, secondCard] //array ordered list of items
+let cards = [] // array ordered list of items
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEL = document.getElementById("cards-el")
@@ -22,13 +24,29 @@ let cardsEL = document.getElementById("cards-el")
 //     console.log("Welcome!")
 // }
 
+let playerEl = document.getElementById("player-el")
+playerEl.textContent = player.name + ": $" + player.chips
 
-function getRandomCard(){
-    let random = Math.floor( Math.random() * 13) + 1
-    return random
+
+function getRandomCard() {
+    let random = Math.floor(Math.random() * 13) + 1
+    if (random === 1) {
+        return 11
+    } else if (random >= 11) {
+        return 10
+    } else {
+        return random
+    }   
 }
 
 function startGame() {
+    isAlive = true
+    let firstCard = getRandomCard ()
+    let secondCard = getRandomCard ()
+
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+
     renderGame()
 }
 
@@ -53,11 +71,13 @@ function renderGame() {
     }
 }
 
-// 2. Create a function newCard() that logs out "Drawing a new card from the deck!"
 function newCard(){
+    // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
+    if(isAlive === true && hasBlackJack === false ){
     let card = getRandomCard ()
     sum += card
     cards.push(card)
     console.log(cards)
     renderGame()
+}
 }
